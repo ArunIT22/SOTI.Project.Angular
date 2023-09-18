@@ -1,3 +1,4 @@
+import { User } from './../accounts/user';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -7,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AccountService {
 
+  private user!: User;
   private baseUrl = "http://localhost:55736/api";
 
 
@@ -14,7 +16,11 @@ export class AccountService {
 
 
   login(emailId: string, password: string): Observable<any> {
-    return this.http.post(`${this.baseUrl}/Accounts`, { emailId, password });
+    this.user = new User();
+    this.user.username = emailId;
+    this.user.password = password;
+    //console.log(this.user);
+    return this.http.post(`${this.baseUrl}/Accounts/Login`, this.user);
   }
 }
 

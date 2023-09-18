@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit, OnDestroy {
   onSubmit() {
     this.service.login(this.f['emailId'].value, this.f['password'].value).subscribe({
       next: (data) => {
-        console.log(data);
-        sessionStorage.setItem("emailId", data.emailId);
+        //console.log(data);
+        sessionStorage.setItem("emailId", data.username);
         sessionStorage.setItem("password", data.password);
       },
       error: (err) => console.error(err)

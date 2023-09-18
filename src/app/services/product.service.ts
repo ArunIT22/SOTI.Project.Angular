@@ -8,12 +8,13 @@ import { Product } from '../products/product';
 })
 export class ProductService {
 
-  private baseUrl = "http://localhost:55736/api/Products"
+  private baseUrl = "http://localhost:55736/api/soti/Products"
   private authHeader!: HttpHeaders;
 
 
   constructor(private http: HttpClient) {
     let authorizeData = 'Basic ' + btoa(sessionStorage.getItem('emailId') + ':' + sessionStorage.getItem('password'));
+    //let authorizeData = 'Basic ' + btoa('arun@gmail.com' + ':' + 'arun');
 
     console.log(authorizeData);
 
