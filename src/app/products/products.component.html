@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <app-search-product (filterEvent)="filterProduct($event)"></app-search-product>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Unit Price</th>
+            <th>Units In Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products">
+            <td> {{p.productName}} </td>
+            <td> {{p.unitPrice}} </td>
+            <td> {{p.unitsInStock}} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
