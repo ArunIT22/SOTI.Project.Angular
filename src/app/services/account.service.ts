@@ -33,5 +33,9 @@ export class AccountService {
     //console.log(this.user);
     return this.http.post(`${this.baseUrl}/token`, body, { headers: this.authHeader });
   }
+
+  logout(){
+    sessionStorage.removeItem("token");
+  }
 }
 

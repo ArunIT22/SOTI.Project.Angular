@@ -16,4 +16,11 @@
       </form>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngIf="statusCode==400">
+        <div class="text-danger">Invalid EmailId or Password</div>
+      </div>
+    </div>
+  </div>
 </div>

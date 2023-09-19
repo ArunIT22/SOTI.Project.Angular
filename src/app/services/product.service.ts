@@ -13,9 +13,9 @@ export class ProductService {
 
 
   constructor(private http: HttpClient) {
-    let authorizeData = 'Basic ' + btoa(sessionStorage.getItem('emailId') + ':' + sessionStorage.getItem('password'));
+    //let authorizeData = 'Basic ' + btoa(sessionStorage.getItem('emailId') + ':' + sessionStorage.getItem('password'));
     //let authorizeData = 'Basic ' + btoa('arun@gmail.com' + ':' + 'arun');
-
+    let authorizeData = 'Bearer ' + sessionStorage.getItem("token");
     console.log(authorizeData);
 
     this.authHeader = new HttpHeaders({
