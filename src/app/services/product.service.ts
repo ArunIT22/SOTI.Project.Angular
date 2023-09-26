@@ -8,7 +8,7 @@ import { Product } from '../products/product';
 })
 export class ProductService {
 
-  private baseUrl = "http://localhost:55736/api/soti/Products"
+  private baseUrl = "http://localhost:55736/api/Products"
   private authHeader!: HttpHeaders;
 
 

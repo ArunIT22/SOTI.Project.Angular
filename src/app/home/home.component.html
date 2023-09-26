@@ -1,1 +1,8 @@
 <h1>Welcome to Home Page</h1>
+
+<div *ngIf="!user">
+  <h3>Welcome Guest</h3>
+</div>
+<div *ngIf="user">
+  <h3>Welcome, {{user}}</h3>
+</div>

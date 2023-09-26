@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './accounts/login/login.component'
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HomeComponent } from './home/home.component';
+import { ScheduleSurgeryComponent } from './schedule-surgery/schedule-surgery.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     SearchProductComponent,
     NavbarComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ScheduleSurgeryComponent
   ],
   imports: [
     BrowserModule,

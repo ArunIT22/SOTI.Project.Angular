@@ -3,6 +3,9 @@
     <div class="col-md-8">
       <app-search-product (filterEvent)="filterProduct($event)"></app-search-product>
     </div>
+    <div class="col-md-8">
+      <a [routerLink]="['/products/addproduct']" class="btn btn-success">Add Product</a>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-8">
@@ -24,4 +27,6 @@
       </table>
     </div>
   </div>
+  <!-- <router-outlet></router-outlet> -->
+
 </div>

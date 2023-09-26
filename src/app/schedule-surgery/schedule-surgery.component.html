@@ -1,0 +1,12 @@
+<form [formGroup]="myForm">
+  <label for="startTime">Start Time:</label>
+  <input type="text" id="startTime" formControlName="startTime">
+
+  <label for="endTime">End Time:</label>
+  <input type="text" id="endTime" formControlName="endTime">
+
+  <button type="submit" class="btn btn-primary ms-2">Submit</button>
+</form>
+<div *ngIf="myForm.hasError('invalid-time')" class="text-danger">
+  Start time must be greater than end time.
+</div>
